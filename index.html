@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <p class="eyebrow">MINHAS FINANÇAS</p>
+        <h1>Controle financeiro</h1>
+        <p>Registre suas entradas e saídas em um só lugar.</p>
+    </header>
+    <main>
+    <section class="resumo" aria-label="Resumo financeiro">
+        <div><span>Receitas</span><strong id="receitas">R$ 0,00</strong></div>
+        <div><span>Despesas</span><strong id="despesas">R$ 0,00</strong></div>
+        <div><span>Saldo</span><strong id="saldo">R$ 0,00</strong></div>
+    </section>
+    <section class="painel">
+        <h2>Novo lançamento</h2>
+<form action="" id="form">
+    <input type="text" id="descricao" placeholder="Descrição" required>
+    <input type="text" id="categoria" placeholder="Categoria (ex.: alimentação)" required>
+    <select name="tipo" id="tipo" required>
+        <option value="despesa">Despesa</option>
+        <option value="receita">Receita</option>
+    </select>
+    <input type="number" id="valor" placeholder="Valor" min="0.01" step="0.01" required>
+    <input type="date" id="data" required>
+    <button type="submit" id="butaopub">Adicionar lançamento</button>
+</form>
+    </section>
+    <section class="historico">
+        <h2>Histórico</h2>
+    <div id="lista"></div>
+    </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>

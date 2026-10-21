@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #1d2a24; background: #f4f1e8; }
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(135deg, #f4f1e8, #e4eee5); min-height: 100vh; }
+header, main { width: min(920px, calc(100% - 32px)); margin: auto; }
+header { padding: 58px 0 30px; }
+.eyebrow { color: #4e8068; font-size: 12px; font-weight: 700; letter-spacing: 2px; margin: 0 0 12px; }
+h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+h1 { font-size: clamp(32px, 6vw, 56px); margin: 0 0 8px; }
+header > p:last-child { color: #5d6d64; margin: 0; }
+.resumo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.resumo div, .painel, .card-lancamento { background: rgba(255,255,255,.75); border: 1px solid #dce5dc; border-radius: 8px; }
+.resumo div { padding: 18px; }
+.resumo span { color: #66756c; display: block; font-size: 14px; margin-bottom: 8px; }
+.resumo strong { font-size: 22px; }
+#despesas { color: #b45645; } #saldo { color: #3d7558; }
+.painel { padding: 24px; }
+h2 { font-size: 22px; margin: 0 0 18px; }
+form { display: grid; grid-template-columns: 1.4fr 1.2fr 1fr 1fr 1fr auto; gap: 10px; }
+input, select, button { border: 1px solid #cbd8cc; border-radius: 5px; font: inherit; min-height: 44px; padding: 10px 12px; }
+button { background: #285c43; color: white; cursor: pointer; font-weight: 700; }
+button:hover { background: #1d4733; }
+.historico { padding: 34px 0 60px; }
+#lista { display: grid; gap: 10px; }
+.card-lancamento { align-items: center; display: grid; gap: 16px; grid-template-columns: 1fr auto auto; padding: 16px 18px; }
+.card-lancamento h3 { font-size: 17px; margin: 0 0 4px; }
+.card-lancamento p { color: #718078; font-size: 13px; margin: 0; }
+.card-lancamento.receita > strong { color: #3d7558; } .card-lancamento.despesa > strong { color: #b45645; }
+.btn-apagar { background: transparent; border: 0; color: #8b5147; font-size: 12px; min-height: auto; padding: 5px; }
+@media (max-width: 760px) { form { grid-template-columns: 1fr 1fr; } form input:first-child, form input:nth-child(2), form button { grid-column: 1 / -1; } .card-lancamento { grid-template-columns: 1fr auto; } .card-lancamento .btn-apagar { grid-column: 2; grid-row: 1; } }
+@media (max-width: 500px) { .resumo { grid-template-columns: 1fr; } form { grid-template-columns: 1fr; } form input, form select, form button { grid-column: 1; } }
